@@ -1,15 +1,16 @@
-# 🎓 EduGrow — Online Certification Portal
+# React + Vite
 
-EduGrow is an online certification portal designed for verified learning, featuring strict sequential progression, mandatory topic quizzes, granular anti-cheat activity tracking, and a 1-on-1 mentor oral evaluation before certification.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-## 🌟 Key Features
-- **3 Independent Portals**: Separate access points for Admin, Mentor, and Student.
-- **Strict Topic Progression**: Topics remain locked until the preceding quiz is cleared and badge earned.
-- **Video Watch Verification**: Anti-skip playback with granular micro-activity tracking.
-- **Admin Fast-Track**: Override permission allowing qualified learners to test directly via quizzes.
-- **5 Supported Material Types**: PDF, PPT, Video, Image, and Docs with strict validation limits.
-- **1-on-1 Mentor Viva**: Live evaluation call and mentor remarks required for certificate issuance.
-- **Yellow "View Activity" Timeline**: Forensic audit log of all student and mentor actions.
+Currently, two official plugins are available:
 
-## 🎨 Design System
-Inspired by the **HIT Foundation** design aesthetic: warm golden amber (`#F59E0B`), soft ivory/cream pills (`#FFFBEB`), clean off-white canvas, and modern typography.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.

@@ -1,0 +1,282 @@
+:root {
+  /* HIT Foundation Brand Colors */
+  --primary: #F59E0B;
+  --primary-hover: #D97706;
+  --primary-light: #FEF3C7;
+  --primary-cream: #FFFBEB;
+  --primary-glow: rgba(245, 158, 11, 0.15);
+
+  /* Neutrals & Text */
+  --text-dark: #111827;
+  --text-body: #4B5563;
+  --text-muted: #9CA3AF;
+  --text-light: #F9FAFB;
+
+  /* Surfaces & Backgrounds */
+  --bg-page: #FCFCFD;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F9FAFB;
+  --border-light: #F3F4F6;
+  --border-card: #E5E7EB;
+
+  /* View Activity Signature Yellow */
+  --activity-yellow-bg: #FEF9C3;
+  --activity-yellow-border: #FACC15;
+  --activity-yellow-text: #854D0E;
+  --activity-yellow-badge: #CA8A04;
+
+  /* Functional Status Colors */
+  --status-active-bg: #ECFDF5;
+  --status-active-text: #059669;
+  --status-inactive-bg: #FEF2F2;
+  --status-inactive-text: #DC2626;
+  --status-fasttrack-bg: #EFF6FF;
+  --status-fasttrack-text: #2563EB;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+
+  /* Radii & Shadows */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 30px -4px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 16px 36px -6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.2s ease;
+}
+
+input, select, textarea {
+  font-family: var(--font-sans);
+}
+
+/* =========================================================
+   Common UI Components & Utilities
+   ========================================================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  color: #111827;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--bg-card);
+  color: var(--text-dark);
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-card);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-cream);
+  border-color: var(--primary);
+}
+
+.btn-dark {
+  background-color: #111827;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.btn-dark:hover {
+  background-color: #1F2937;
+  transform: translateY(-1px);
+}
+
+/* Special Yellow "View Activity" Button & Print */
+.btn-activity-yellow {
+  background-color: var(--activity-yellow-bg);
+  color: var(--activity-yellow-text);
+  border: 2px solid var(--activity-yellow-border);
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 10px rgba(250, 204, 21, 0.25);
+  letter-spacing: 0.02em;
+}
+
+.btn-activity-yellow:hover {
+  background-color: #FEF08A;
+  border-color: #EAB308;
+  transform: translateY(-1px);
+}
+
+/* Badges & Pills */
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  background-color: var(--primary-light);
+  color: #92400E;
+}
+
+.pill-badge.green {
+  background-color: #ECFDF5;
+  color: #065F46;
+}
+
+.pill-badge.blue {
+  background-color: #EFF6FF;
+  color: #1E40AF;
+}
+
+.pill-badge.yellow {
+  background-color: var(--activity-yellow-bg);
+  border: 1px solid var(--activity-yellow-border);
+  color: var(--activity-yellow-text);
+}
+
+.dot-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981;
+}
+
+.dot-indicator.yellow {
+  background-color: #F59E0B;
+}
+
+.dot-indicator.red {
+  background-color: #EF4444;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+/* Tabs & Filter Pill */
+.filter-tabs-wrapper {
+  display: inline-flex;
+  background-color: var(--primary-cream);
+  padding: 4px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--primary-light);
+}
+
+.filter-tab {
+  padding: 8px 20px;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-body);
+  transition: all 0.2s ease;
+}
+
+.filter-tab.active {
+  background-color: var(--primary);
+  color: #111827;
+  box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
